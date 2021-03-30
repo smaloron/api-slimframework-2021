@@ -49,21 +49,14 @@ service apache2 restart
 # Intallation de Git
 sudo apt-get -y install git
 
+git config --global user.name "user"
+git config --global user.email "user@mail.com"
+
 # Intallation de Composer
 curl -s https://getcomposer.org/installer | php
 mv composer.phar /usr/local/bin/composer
 
-# Installation de nodejs et npm
-sudo apt-get install -y nodejs npm
-cd /vagrant-app
-# Définition du projet
-npm init -y
-# Installation des bibliothèques
-npm install jquery bootstrap popper.js --save
-# Liens symboliques (raccourcis) dans la racine du serveur
-cp -f /vagrant-app/node_modules/bootstrap/dist/css/bootstrap.min.css /vagrant-app/web/assets/
-cp -f /vagrant-app/node_modules/bootstrap/dist/js/bootstrap.min.js /vagrant-app/web/assets/
-cp -f /vagrant-app/node_modules/jquery/dist/jquery.min.css /vagrant-app/web/assets/
+
 
 
 

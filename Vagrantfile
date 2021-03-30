@@ -7,7 +7,7 @@ Vagrant.configure("2") do |config|
 
   config.vm.network "forwarded_port", guest: 80, host: 8080
 
-  config.vm.synced_folder "./app", "/vagrant-app"
+  config.vm.synced_folder "./app", "/app"
 
   config.vm.synced_folder "./config", "/vagrant-conf"
 

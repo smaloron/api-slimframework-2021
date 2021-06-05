@@ -1,8 +1,8 @@
 <?php
 
 $path = filter_input(INPUT_GET, "path", FILTER_SANITIZE_URL);
-
-var_dump($path);
+$test = 7;
+var_dump($_SERVER);
 
 ?>
 
